@@ -1,63 +1,49 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import Footer from "../components/Footer";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import AppLayout from "@/layouts/AppLayout.astro";
+import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
+import { Button } from "@/components/ui/button";
+import AIPersonaButton from "@/components/ai-persona-button";
+import {
+  TooltipProvider,
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { Skull } from "@lucide/astro";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <AppLayout>
-    <Header />
-    <main>
-      <h1>🧑‍🚀 Hello, Astronaut!</h1>
-      <p>
-        Welcome to the official <a href="https://astro.build/">Astro</a> blog starter
-        template. This template serves as a lightweight, minimally-styled starting
-        point for anyone looking to build a personal website, blog, or portfolio
-        with Astro.
+<AppLayout>
+  <div class="flex flex-col gap-8 text-white">
+    <div class="flex flex-col gap-4">
+
+	  <Footer client:only/>
+	        <div class="flex gap-4 items-center text-white/60">
+        <p class="font-gaegu text-2xl">Welcome :)</p>
+        <img src="/confetti.avif" class="w-6 h-6" alt="" />
+      </div>
+      <p class="text-white/80">
+        Hi, Im Neha, a Computer Science Undergrad from Lovely Professional
+        University by day and a curious writer by night. I work at Random
+        Solutions, crafting intuitive user experiences. Here, I share my
+        thoughts on design, engineering, AI, and the random sparks of
+        inspiration that keep me going.
       </p>
-      <p>
-        This template comes with a few integrations already configured in your
-        <code>astro.config.mjs</code> file. You can customize your setup with
-        <a href="https://astro.build/integrations">Astro Integrations</a> to add
-        tools like Tailwind, React, or Vue to your project.
-      </p>
-      <p>Here are a few ideas on how to get started with the template:</p>
-      <ul>
-        <li>Edit this page in <code>src/pages/index.astro</code></li>
-        <li>
-          Edit the site header items in <code>src/components/Header.astro</code>
-        </li>
-        <li>
-          Add your name to the footer in <code
-            >src/components/Footer.astro</code>
-        </li>
-        <li>
-          Check out the included blog posts in <code>src/content/blog/</code>
-        </li>
-        <li>
-          Customize the blog post page layout in <code
-            >src/layouts/BlogPost.astro</code>
-        </li>
-      </ul>
-      <p>
-        Have fun! If you get stuck, remember to
-        <a href="https://docs.astro.build/">read the docs</a>
-        or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-      </p>
-      <p>
-        Looking for a blog template with a bit more personality? Check out
-        <a href="https://github.com/Charca/astro-blog-template"
-          >astro-blog-template</a
-        >
-        by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-      </p>
-    </main>
-    <Footer />
-  </AppLayout>
-</html>
+    </div>
+
+    <div>
+      <AIPersonaButton client:load />
+    </div>
+
+    <div class="flex flex-col gap-4"></div>
+    <p class="font-gaegu text-xl text-white/60">Links</p>
+    <div>
+      <p>GitHub</p>
+      <p>GitHub</p>
+      <p>GitHub</p>
+    </div>
+  </div>
+</AppLayout>

@@ -1,17 +1,32 @@
 ---
 import "../styles/global.css";
-// Supports weights 300-900
-import "@fontsource-variable/figtree";
+import "@fontsource/gaegu";
+import "@fontsource-variable/outfit";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer";
+import { ClientRouter } from "astro:transitions";
 ---
 
-<body
-  class="text-white min-h-screen"
-  style={{
-    background:
-      "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(244, 114, 182, 0.25), transparent 70%), #000000",
-  }}
->
-  <main class="max-w-3xl mx-auto p-4 font-figtree">
-    <slot />
-  </main>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <ClientRouter />
+  </head><body
+    class="text-white min-h-screen"
+    style={{
+      background:
+        "radial-gradient(ellipse 80% 50% at 50% 0%, rgba(244, 114, 182, 0.25), transparent 50%), #000000",
+    }}
+  >
+    <Header />
+    <main
+      class="max-w-3xl mx-auto p-4 font-outfit flex flex-col gap-4 min-h-screen"
+    >
+      <slot />
+    </main>
+  </body><Footer client:load />
+</html>

@@ -20,7 +20,8 @@
 }
 
 @theme inline {
-  --font-figtree: "Figtree Variable", sans-serif;
+  --font-outfit: "Outfit Variable", sans-serif;
+  --font-gaegu: "Gaegu", cursive;
 
   --color-main: var(--main);
   --color-main-secondary: var(--main-secondary);
@@ -36,7 +37,7 @@
 
   --color-border: var(--border);
 
-  --animate-shine: shine 6s linear infinite;
+  --animate-shine: shine 12s linear infinite;
   --animate-border-width: border-width 3s infinite alternate;
   --animate-text-gradient: text-gradient 2s linear infinite;
   --animate-text-shake: text-shake 1s ease 1;

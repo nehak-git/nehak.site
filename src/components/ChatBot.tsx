@@ -16,7 +16,7 @@ export default function LakshAI() {
   };
 
   renderer.link = ({ href, text }) =>
-    `<a href="${href}" target="_blank" rel="noopener noreferrer" class="text-indigo-300 underline underline-offset-2 transition duration-150 ease-in-out hover:text-black hover:underline">${text}</a>`;
+    `<a href="${href}" target="_blank" rel="noopener noreferrer" class="text-purple-700 underline underline-offset-2 transition duration-150 ease-in-out hover:text-black hover:underline">${text}</a>`;
 
   marked.setOptions({ renderer });
 
@@ -46,8 +46,10 @@ export default function LakshAI() {
   const isDisabled = isProcessing || input.trim() === "";
 
   return (
-    <div className="flex  flex-col text-sm  h-[calc(100vh-100px)]
-">
+    <div
+      className="flex  flex-col text-sm  h-[calc(100vh-100px)]
+"
+    >
       <div
         ref={chatContainerRef}
         className="border-body/20 flex1 overflow-y-auto rounded-lg h-full flex-1  "
@@ -67,8 +69,8 @@ export default function LakshAI() {
               <div
                 className={`${
                   m.role === "user"
-                    ? "rounded-full bg-main "
-                    : "rounded-full bg-main "
+                    ? "rounded-full bg-rose-200 text-rose-900 "
+                    : "rounded-full bg-purple-200 text-purple-900 "
                 } max-w-xs rounded-lg px-2.5 py-1.5`}
               >
                 <div dangerouslySetInnerHTML={{ __html: marked(m.content) }} />
@@ -97,29 +99,36 @@ export default function LakshAI() {
       </div>
       <div className="flex w-full justify-between gap-2 pt-4 text-xs">
         <button
-          onClick={() => handleButtonClick("What is your design philosophy?")}
+          onClick={() => handleButtonClick("Tell me more about Neha")}
           className="rounded-lg bg-rose-100 px-2.5 py-1.5 text-rose-700 transition duration-300 ease-in-out md:hover:scale-95 md:hover:bg-rose-200 md:hover:text-rose-900"
           disabled={isProcessing}
         >
-          What is your design philosophy?
+          Tell me more about Neha
         </button>
         <button
-          onClick={() => handleButtonClick("Are you available for hire?")}
+          onClick={() => handleButtonClick("Projects Neha has worked on")}
           className="rounded-lg bg-violet-100 px-2.5 py-1.5 text-violet-700 transition duration-300 ease-in-out md:hover:scale-95 md:hover:bg-violet-200 md:hover:text-violet-900"
           disabled={isProcessing}
         >
-          Are you available for hire?
+          Projects Neha has worked on
         </button>
         <button
           onClick={() =>
             handleButtonClick(
-              "How much time does it take for you to design & code a website?"
+              "What are the technologies Neha uses?"
             )
           }
           className="rounded-lg bg-amber-100 px-2.5 py-1.5 text-amber-700 transition duration-300 ease-in-out md:hover:scale-95 md:hover:bg-amber-200 md:hover:text-amber-900"
           disabled={isProcessing}
         >
-          How much time does it take for you to design & code a website?
+          What are the technologies Neha uses?
+        </button>
+        <button
+          onClick={() => handleButtonClick("Fun facts about her?")}
+          className="rounded-lg bg-amber-100 px-2.5 py-1.5 text-amber-700 transition duration-300 ease-in-out md:hover:scale-95 md:hover:bg-amber-200 md:hover:text-amber-900"
+          disabled={isProcessing}
+        >
+          Fun facts about her?
         </button>
       </div>
       <form onSubmit={handleSubmit} className="flex-none pt-4">
