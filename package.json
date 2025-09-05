@@ -1,37 +1,31 @@
 {
   "name": "nehak.site",
+  "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
-    "build": "react-router build",
-    "dev": "react-router dev",
-    "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc",
-    "postinstall": "bun prisma generate"
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "lint": "eslint"
   },
   "dependencies": {
-    "@fontsource-variable/rethink-sans": "^5.2.6",
     "@prisma/client": "^6.15.0",
-    "@react-router/node": "^7.7.1",
-    "@react-router/serve": "^7.7.1",
-    "@vercel/react-router": "^1.2.3",
-    "isbot": "^5.1.27",
     "lucide-react": "^0.542.0",
+    "next": "15.5.2",
     "ogl": "^1.0.11",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-router": "^7.7.1"
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "@react-router/dev": "^7.7.1",
-    "@tailwindcss/vite": "^4.1.4",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
-    "@types/react": "^19.1.2",
-    "@types/react-dom": "^19.1.2",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.2",
     "prisma": "^6.15.0",
-    "tailwindcss": "^4.1.4",
-    "typescript": "^5.8.3",
-    "vite": "^6.3.3",
-    "vite-tsconfig-paths": "^5.1.4"
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }

@@ -1,23 +1,12 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
-import DarkVeil from "@/components/DarkVeil/DarkVeil";
-import Header from "@/components/Header";
+import GitHub from "@/components/icons/github";
+import LinkedIn from "@/components/icons/linkedin";
+import ProjectList from "@/components/proejct-list";
+import { prisma } from "@/lib/prisma";
 import { Github, Linkedin } from "lucide-react";
-import ProjectList from "@/components/project-list";
-import { prisma } from "@/utils/prisma";
+import Image from "next/image";
 
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
-}
-export async function loader({ params }: Route.LoaderArgs) {
-  const projects = await prisma.project.findMany();
-  return projects;
-}
-export default function Home({ loaderData }: Route.ComponentProps) {
-  const projects = loaderData;
+export default async function Home() {
+  const projects = await prisma.project.findMany()
   return (
     <div className="flex flex-col gap-10">
       <div className="flex flex-col gap-2 py-20">
@@ -32,11 +21,11 @@ export default function Home({ loaderData }: Route.ComponentProps) {
         </p>
         <div className="flex gap-8 mt-8">
           <div className="flex items-center gap-2 text-neutral-400">
-            <Linkedin size={15} />
+            <LinkedIn />
             LinkedIn
           </div>
           <div className="flex items-center gap-2 text-neutral-400">
-            <Github size={15} />
+            <GitHub />
             GitHub
           </div>
         </div>
