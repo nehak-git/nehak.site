@@ -14,6 +14,7 @@
     "@prisma/client": "^6.15.0",
     "@react-router/node": "^7.7.1",
     "@react-router/serve": "^7.7.1",
+    "@vercel/react-router": "^1.2.3",
     "isbot": "^5.1.27",
     "lucide-react": "^0.542.0",
     "ogl": "^1.0.11",
