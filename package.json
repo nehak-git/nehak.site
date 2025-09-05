@@ -6,8 +6,7 @@
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc",
-    "postinstall": "bun prisma generate"
+    "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
     "@fontsource-variable/rethink-sans": "^5.2.6",
