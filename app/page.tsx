@@ -2,8 +2,6 @@ import GitHub from "@/components/icons/github";
 import LinkedIn from "@/components/icons/linkedin";
 import ProjectList from "@/components/proejct-list";
 import { prisma } from "@/lib/prisma";
-import { Github, Linkedin } from "lucide-react";
-import Image from "next/image";
 
 export default async function Home() {
   const projects = await prisma.project.findMany()
