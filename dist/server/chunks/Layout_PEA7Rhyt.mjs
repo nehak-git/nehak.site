@@ -1,0 +1,52 @@
+import { c as createComponent, f as createAstro, g as addAttribute, h as renderHead, i as renderSlot, u as unescapeHTML, a as renderTemplate } from './astro/server_m-MB8ZxY.mjs';
+import 'piccolore';
+import 'clsx';
+/* empty css                      */
+
+const $$Astro = createAstro();
+const $$Layout = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
+  Astro2.self = $$Layout;
+  const { title } = Astro2.props;
+  const pathname = Astro2.url.pathname;
+  const links = [
+    {
+      label: "home",
+      href: "/",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12v7.206a1.727 1.727 0 0 1-2.5 1.544a2.89 2.89 0 0 0-2.896.18a2.89 2.89 0 0 1-3.208 0l-.353-.234a1.88 1.88 0 0 0-2.086 0l-.353.235a2.89 2.89 0 0 1-3.208 0a2.89 2.89 0 0 0-2.897-.18A1.727 1.727 0 0 1 2 19.205V12C2 6.477 6.477 2 12 2s10 4.477 10 10" opacity=".5"/><path fill="currentColor" d="M9.447 14.398a.75.75 0 1 0-.894 1.204A5.77 5.77 0 0 0 12 16.75a5.77 5.77 0 0 0 3.447-1.148a.75.75 0 1 0-.894-1.204A4.27 4.27 0 0 1 12 15.25a4.27 4.27 0 0 1-2.553-.852M16 9.5c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5s.448-1.5 1-1.5s1 .672 1 1.5M9 11c.552 0 1-.672 1-1.5S9.552 8 9 8s-1 .672-1 1.5s.448 1.5 1 1.5"/></svg>`
+    },
+    {
+      label: "projects",
+      href: "/projects",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M8.422 20.618C10.178 21.54 11.056 22 12 22V12L2.638 7.073l-.04.067C2 8.154 2 9.417 2 11.942v.117c0 2.524 0 3.787.597 4.801c.598 1.015 1.674 1.58 3.825 2.709z"/><path fill="currentColor" d="m17.577 4.432l-2-1.05C13.822 2.461 12.944 2 12 2c-.945 0-1.822.46-3.578 1.382l-2 1.05C4.318 5.536 3.242 6.1 2.638 7.072L12 12l9.362-4.927c-.606-.973-1.68-1.537-3.785-2.641" opacity=".7"/><path fill="currentColor" d="m21.403 7.14l-.041-.067L12 12v10c.944 0 1.822-.46 3.578-1.382l2-1.05c2.151-1.129 3.227-1.693 3.825-2.708c.597-1.014.597-2.277.597-4.8v-.117c0-2.525 0-3.788-.597-4.802" opacity=".5"/><path fill="currentColor" d="m6.323 4.484l.1-.052l1.493-.784l9.1 5.005l4.025-2.011q.205.232.362.498c.15.254.262.524.346.825L17.75 9.964V13a.75.75 0 0 1-1.5 0v-2.286l-3.5 1.75v9.44A3 3 0 0 1 12 22c-.248 0-.493-.032-.75-.096v-9.44l-8.998-4.5c.084-.3.196-.57.346-.824q.156-.266.362-.498l9.04 4.52l3.387-1.693z"/></svg>`
+    },
+    {
+      label: "blogs",
+      href: "/blogs",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 10c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h2c3.771 0 5.657 0 6.828 1.172S21 6.229 21 10v4c0 3.771 0 5.657-1.172 6.828S16.771 22 13 22h-2c-3.771 0-5.657 0-6.828-1.172S3 17.771 3 14z" opacity=".5"/><path fill="currentColor" d="M16.519 16.501c.175-.136.334-.295.651-.612l3.957-3.958c.096-.095.052-.26-.075-.305a4.3 4.3 0 0 1-1.644-1.034a4.3 4.3 0 0 1-1.034-1.644c-.045-.127-.21-.171-.305-.075L14.11 12.83c-.317.317-.476.476-.612.651q-.243.311-.412.666c-.095.2-.166.414-.308.84l-.184.55l-.292.875l-.273.82a.584.584 0 0 0 .738.738l.82-.273l.875-.292l.55-.184c.426-.142.64-.212.84-.308q.355-.17.666-.412m5.849-5.809a2.163 2.163 0 1 0-3.06-3.059l-.126.128a.52.52 0 0 0-.148.465c.02.107.055.265.12.452c.13.375.376.867.839 1.33s.955.709 1.33.839c.188.065.345.1.452.12a.53.53 0 0 0 .465-.148z"/><path fill="currentColor" fill-rule="evenodd" d="M7.25 9A.75.75 0 0 1 8 8.25h6.5a.75.75 0 0 1 0 1.5H8A.75.75 0 0 1 7.25 9m0 4a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75m0 4a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg>`
+    },
+    {
+      label: "gallery",
+      href: "/gallery",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21.904 16.441c.083-1.024.094-2.274.096-3.743a.697.697 0 1 0-1.396 0c-.001 1.477-.012 2.658-.091 3.63c-.084 1.032-.242 1.763-.507 2.32l-2.633-2.37a2.79 2.79 0 0 0-3.471-.21l-.277.196a1.86 1.86 0 0 1-2.386-.207l-3.99-3.99a2.14 2.14 0 0 0-2.922-.097l-.931.814V12c0-2.212 0-3.801.163-5.01c.16-1.19.464-1.907.994-2.437S5.8 3.72 6.99 3.56c1.079-.145 2.458-.161 4.313-.163a.699.699 0 0 0 0-1.396c-1.829.002-3.33.02-4.499.177c-1.343.18-2.404.557-3.236 1.39s-1.21 1.893-1.39 3.236C2 8.116 2 9.8 2 11.947V12q0 .736.002 1.396c.007 1.729.044 3.121.243 4.24c.203 1.14.584 2.058 1.322 2.796c.832.833 1.893 1.21 3.236 1.39C8.116 22 9.8 22 11.947 22h.106c2.148 0 3.83 0 5.144-.177c1.344-.18 2.404-.557 3.236-1.39a4.2 4.2 0 0 0 .73-.983c.445-.825.644-1.82.74-3.009" opacity=".5"/><path fill="currentColor" fill-rule="evenodd" d="M17.5 11c-2.121 0-3.182 0-3.841-.659S13 8.621 13 6.5s0-3.182.659-3.841S15.379 2 17.5 2s3.182 0 3.841.659S22 4.379 22 6.5s0 3.182-.659 3.841S19.621 11 17.5 11m-1.455-2.784c-.765-.67-1.545-1.564-1.545-2.418c0-1.773 1.65-2.435 3-1.065c1.35-1.37 3-.708 3 1.065c0 .854-.78 1.747-1.545 2.418c-.596.523-.894.784-1.455.784c-.56 0-.859-.261-1.455-.784" clip-rule="evenodd"/></svg>`
+    },
+    {
+      label: "ai",
+      href: "/ai",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9.606 5.563c.766 0 .914-.157 2.394-.157s1.628.157 2.394.157c.638 0 2.554-1.563 3.511-1.563s2.075.563 2.075 2.188v1.875c-.002.492-.18 2-.88 1.597c1.111 1.314.88 2.922.88 4.34c0 3.906-5.267 5-7.98 5s-7.98-1.094-7.98-5c0-1.418-.231-3.026.88-4.34c-.7.403-.878-1.105-.88-1.598V6.188C4.02 4.563 5.137 4 6.095 4c.957 0 2.873 1.563 3.511 1.563" opacity=".5"/><path fill="currentColor" d="M9.016 11.063c-.489 0-.815.317-.98.583a1.8 1.8 0 0 0-.254.948c0 .332.082.67.254.947c.165.266.491.584.98.584c.49 0 .815-.318.98-.584c.172-.278.254-.615.254-.947c0-.333-.082-.67-.254-.948c-.165-.266-.49-.584-.98-.584m5.021.584c.164-.266.49-.584.98-.584c.488 0 .814.318.979.584c.172.278.254.615.254.948s-.082.67-.254.947c-.165.266-.49.584-.98.584c-.489 0-.815-.318-.98-.584a1.8 1.8 0 0 1-.254-.947c0-.333.082-.67.255-.948"/><path fill="currentColor" fill-rule="evenodd" d="M11.178 14.08a2.4 2.4 0 0 1 .841-.143c.292 0 .59.045.842.143a1.3 1.3 0 0 1 .408.245c.134.123.307.35.307.675a.92.92 0 0 1-.307.675a1.3 1.3 0 0 1-.408.245c-.253.098-.55.143-.842.143c-.29 0-.588-.045-.84-.143a1.3 1.3 0 0 1-.41-.245a.92.92 0 0 1-.306-.675c0-.325.173-.552.307-.675a1.3 1.3 0 0 1 .408-.245" clip-rule="evenodd"/><path fill="currentColor" d="M17.863 13.375a.75.75 0 0 1 .75-.75c.296 0 .65.067.981.149c.345.085.72.199 1.076.321c.684.234 1.41.532 1.737.744a.75.75 0 0 1-.813 1.26c-.157-.101-.722-.35-1.409-.585a12 12 0 0 0-.95-.284a3 3 0 0 0-.622-.105a.75.75 0 0 1-.75-.75m.105 1.75a.75.75 0 1 0 0 1.5c.206 0 .55.115.98.343c.342.18.656.385.901.545l.131.086a.75.75 0 0 0 .814-1.26l-.113-.074a13 13 0 0 0-1.032-.623c-.457-.242-1.08-.517-1.681-.517m-14.153-.611c-.687.235-1.252.484-1.408.585a.75.75 0 0 1-.814-1.26c.328-.212 1.053-.51 1.737-.744c.357-.122.732-.237 1.077-.321c.33-.082.684-.149.98-.149a.75.75 0 0 1 0 1.5c-.107 0-.317.03-.622.105c-.29.072-.621.172-.95.284m.205 3.085l.131-.086c.246-.16.56-.365.901-.545c.431-.228.775-.343.98-.343a.75.75 0 0 0 0-1.5c-.6 0-1.224.275-1.68.517c-.41.216-.79.465-1.033.623l-.113.074a.75.75 0 0 0 .814 1.26"/></svg>`
+    }
+  ];
+  return renderTemplate`<html lang="en"> <head><meta charset="UTF-8"><meta name="description" content="Astro description"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator"${addAttribute(Astro2.generator, "content")}><title>${title}</title>${renderHead()}</head> <body class="antialiased"> <div class="min-h-screen w-full bg-white relative"> <div class="absolute inset-0 z-0 pointer-events-none"${addAttribute({
+    background: "#ffffff",
+    backgroundImage: "radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.15) 1px, transparent 0)",
+    backgroundSize: "20px 20px"
+  }, "style")}></div> <div class="relative z-10"> <main class="max-w-3xl mx-auto py-12 px-5 md:px-0 pb-32"> ${renderSlot($$result, $$slots["default"])} </main> <nav class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-1 p-1.5 bg-white/50 backdrop-blur-xl border-2 border-pink-100/40 rounded-[2rem] transition-transform hover:scale-105 duration-300 corner-squircle"> ${links.map((link) => {
+    const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+    return renderTemplate`<a${addAttribute(link.href, "href")}${addAttribute([
+      "relative flex flex-col items-center justify-center px-4 py-2 transition-colors rounded-xl gap-0.5 group",
+      isActive ? "text-pink-500" : "text-stone-500 hover:text-stone-700 hover:bg-white/40"
+    ], "class:list")}> <span class="block w-6 h-6 transition-transform group-hover:-translate-y-0.5 duration-300">${unescapeHTML(link.icon)}</span> <span class="text-[10px] font-medium uppercase tracking-wider leading-none">${link.label}</span> </a>`;
+  })} </nav> </div> </div> </body></html>`;
+}, "/home/rahaman/nehak.site/src/layouts/Layout.astro", void 0);
+
+export { $$Layout as $ };
