@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import GalleryGrid from "../components/react/GalleryGrid";
 ---
 
 <Layout title="Gallery | Neha Kumari">
@@ -9,8 +10,9 @@ import Layout from "../layouts/Layout.astro";
         Gallery
       </h1>
       <p class="text-stone-600 mt-2">
-        Coming soon...
+        A collection of moments
       </p>
     </div>
+    <GalleryGrid client:load />
   </div>
 </Layout>
